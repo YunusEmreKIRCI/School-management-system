@@ -1,0 +1,43 @@
+﻿.orta {
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    text-decoration: none;
+    display: inline-block;
+}
+
+ol.u {
+    list-style-type: none;
+    font: 18px Arial, sans-serif;
+}
+
+.ali {
+    font: bold 22px Audiowide, sans-serif;
+    text-align: center;
+}
+
+.active, .collapsible:hover {
+    background-color: #198754;
+}
+
+.collapsible {
+    background-color: #343a40;
+    color: white;
+    border: 0ch;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    color: #343a40;
+    font: bold 15px Audiowide, sans-serif;
+}

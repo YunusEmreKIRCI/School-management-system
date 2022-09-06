@@ -1,0 +1,50 @@
+﻿body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.nl2-header {
+    height: 90px;
+    padding: 3px;
+}
+
+.Yazı {
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.nav-bar {
+    background: #201E2B;
+}
+
+.orta {
+    text-align: center;
+}
+
+.yazılar {
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+    .orta {
+        text-align: left !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .orta {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+}

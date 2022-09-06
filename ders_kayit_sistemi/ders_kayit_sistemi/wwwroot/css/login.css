@@ -1,0 +1,169 @@
+﻿html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+    background-image: url(../images/wp.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+}
+
+.logo_photo {
+    height: 300px;
+    width: 300px;
+}
+
+.isim {
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.Login {
+    font-family: "Audiowide", Sans-serif;
+    font-size: 20px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.box {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 1rem 2rem 1rem;
+    box-shadow: 0 1px 15px rgb(0 0 0 / 10%), 0 1px 6px rgb(0 0 0 / 10%);
+}
+
+.button1 {
+    width: 100%;
+    background-color: black;
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "Audiowide", sans-serif;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+    .button1:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+.küçük {
+    zoom: 0.8;
+}
+
+.input-container {
+    width: 60%;
+    margin: 50px 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+    .input-container input {
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        border: 0;
+        outline: none;
+        color: #333;
+    }
+
+i {
+    margin: 0 10px;
+    color: #aaa;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.button2 {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    align-items: center;
+    zoom: 1.2;
+}
+
+.name {
+}
+
+.password {
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 768px) {
+    .button1 {
+        margin-top: 20px;
+    }
+
+
+
+    .name {
+        width: 220px;
+    }
+
+    .password {
+        width: 220px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .logo_photo {
+        height: 350px;
+        width: 350px;
+    }
+
+    .name {
+        width: 250px;
+    }
+
+    .password {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .logo_photo {
+        height: 400px;
+        width: 400px;
+    }
+
+    .name {
+        width: 280px;
+    }
+
+    .password {
+        width: 280px;
+    }
+}

@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>XYZ Tech. Admin</title>
+	<link rel="icon" type="logo_photo.jpg">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+</head>
+<body>
+	<div class="row m-0">
+		<div class="col p-0">
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<div class="nl2-header">
+					<div class="nl2-header-cont d-flex flex-row mb-3">
+						<img src="~/images/logo-white.png" style="height:70px;border:0px;margin-top:4px;margin-left:65px;">
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto justify-content-center align-items-center" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link baş" href="@Url.Action("Index","Admin")">Ana Sayfa</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link baş" href="@Url.Action("Ogr","Register")">Öğrenci Kayıt</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link baş" href="@Url.Action("Personel","Register")">Personel Kayıt</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link baş" href="@Url.Action("Bolum","Register")">Bölüm Kayıt</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0">
+						@*<button class="btn btn-danger my-2 my-sm-0" href="@Url.Action("Index","Login")" type="submit">Çıkış Yap</button>*@
+						<a class="btn btn-danger" href="@Url.Action("Admin","Login")">Çıkış Yap</a>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<div class="container">
+		<footer class="py-3 my-4">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item"><a class="nav-link text-muted" href="@Url.Action("Index","Admin")">Ana Sayfa</a></li>
+				<li class="nav-item"><a href="#sss" class="nav-link px-2 text-muted">SSS</a></li>
+				<li class="nav-item"><a href="#hakkında" class="nav-link px-2 text-muted">Hakkında</a></li>
+			</ul>
+			<p class="text-center text-muted">© 2022 XYZ Teknoloji Üniversitesi</p>
+		</footer>
+	</div>
+
+</body>
+</html>

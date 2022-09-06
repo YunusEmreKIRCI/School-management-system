@@ -1,0 +1,51 @@
+﻿@model ders_kayit_sistemi.Models.BolumModel
+@{
+	ViewBag.Title = "Index";
+}
+
+@{
+	Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<head>
+    
+    <title>XYZ Teknoloji Üniversitesi</title>
+    <link rel="stylesheet" href="~/css/style_kayıt_ekranı.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+		
+		<body>
+    <div class="row d-flex justify-content-center align-items-center box">
+        @using (Html.BeginForm("NewBolum", "Register")){
+        <div class="col">
+            <p class="uni">XYZ Tech. Üni. Bölüm</p>
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="Login">@Html.LabelFor(a => a.Ad, new { @class = "Login"})</div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col">
+                    <div> @Html.TextBoxFor(a => a.Ad, new { @class = "form-control"})</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="Register" class="button1" />
+                    @*<a class="nav-link baş" href="@Url.Action("Index","Admin")">Ana sayfaya geri dön</a>*@
+                </div>
+            </div>
+        </div>
+        <br>
+        }
+    </div>
+</body>

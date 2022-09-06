@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - ders_kayit_sistemi</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="nl2-header">
+				<div class="nl2-header-cont d-flex flex-row mb-3">
+					<img src="~/images/logo-white.png" style="height:70px;border:0px;margin-top:4px;margin-left:65px;">
+				</div>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+				<ul class="navbar-nav mr-auto justify-content-center align-items-center" role="tablist">
+					<li class="nav-item">
+						@*<a class="nav-link active baş" data-toggle="tab" href="#Ana-Sayfa">Ana Sayfa</a>*@
+						<a class="nav-link baş" href="@Url.Action("Index","Ogrenci")">Ana Sayfa</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link baş" href="@Url.Action("Index","DersKayit")">Ders Seçimi</a>
+					</li>
+					@*
+						<li class="nav-item">
+						<a class="nav-link baş" data-toggle="tab" href="#Haftalık-Program">Haftalık Program</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link baş" data-toggle="tab" href="#Bölüm-Dersleri">Bölüm Dersleri</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link baş" data-toggle="tab" href="#Devamsızlık-Çizelgesi">Devamsızlık Çizelgesi</a>
+						</li>
+						<li class="nav-item">
+						<a class="nav-link baş" data-toggle="tab" href="#Tranksript">Tranksript</a>
+						</li>*@
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<a class="btn btn-danger" href="@Url.Action("Ogr","Login")">Çıkış Yap</a>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="py-3 my-4">
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a class="nav-link text-muted" href="@Url.Action("Index","Ogrenci")">Ana Sayfa</a></li>
+			<li class="nav-item"><a class="nav-link text-muted" href="@Url.Action("SSS","Ogrenci")">SSS</a></li>
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Hakkında</a></li>
+		</ul>
+		<p class="text-center text-muted">© 2022 XYZ Teknoloji Üniversitesi</p>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

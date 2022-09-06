@@ -1,0 +1,99 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XYZ Teknoloji Üniversitesi</title>
+    <link rel="stylesheet" href="~/css/register.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+        <div class="row d-flex justify-content-center align-items-center box">
+            <div class="col">
+                <p class="uni">XYZ Tech. Üni. Öğrenci Kayıt</p>
+                <div class="row">
+                    <div class="col">
+                        <label class="Login" for="Adı">Adı:</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="text" value="" id="myInput" class="name">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <label class="Login" for="Soyadı">Soyad:</label>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col">
+                        <input type="text" value="" id="myInput" class="name">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <label class="Login" for="Parola">Şifre:</label>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col">
+                        <input type="password" value="" id="pwd" class="password">
+                    </div>
+                    <div class="col p-sm-0 d-flex align-items-center">
+                        <button class="material-icons visibility i button2"
+                                onclick="myFunction()">
+                            visibility_off
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <button class="button1">Giriş </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("pwd");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+    <script>
+        const visibilityToggle = document.querySelector('.visibility');
+
+        const input = document.querySelector('.input-container input');
+
+        var password = true;
+
+        visibilityToggle.addEventListener('click', function () {
+            if (password) {
+                visibilityToggle.innerHTML = 'visibility';
+            } else {
+                visibilityToggle.innerHTML = 'visibility_off';
+            }
+            password = !password;
+
+        });
+    </script>
+</body>
+</html>

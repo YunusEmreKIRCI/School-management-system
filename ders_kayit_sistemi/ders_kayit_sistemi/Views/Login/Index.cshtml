@@ -1,0 +1,48 @@
+﻿@model ders_kayit_sistemi.Models.Personel
+@{
+	ViewData["Title"] = "Home Page";
+}
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>XYZ Teknoloji Üniversitesi</title>
+
+
+	<link rel="stylesheet" href="~/css/login.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="row d-flex justify-content-center align-items-center box">
+		<div class="col-md-6 d-flex justify-content-center align-items-center">
+			<div class="row">
+				<div class="col-12 d-flex justify-content-center align-items-center">
+					<img src="~/images/logo_photo_transparent.png" class="logo_photo">
+				</div>
+
+				<div class="col-12 d-flex justify-content-center align-items-center text-align-center mt-4">
+					<p class="isim">XYZ Teknoloji Üniversitesi</p>
+				</div>
+			</div>
+		</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="col-sm-6 mx-auto text-center">
+						<a class="button1" href="@Url.Action("Personel","Login")">Personel Giriş</a>
+						<a class="button1" href="@Url.Action("Ogr","Login")">Öğrenci Giriş</a>
+						<a class="button1" href="@Url.Action("Admin","Login")">Admin Giriş</a>
+					</div>
+				</div>
+	</div>
+</body>
+
+</html>

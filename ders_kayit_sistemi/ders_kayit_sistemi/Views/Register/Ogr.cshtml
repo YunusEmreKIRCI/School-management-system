@@ -1,0 +1,129 @@
+﻿@using ders_kayit_sistemi.Models
+@model ders_kayit_sistemi.Models.RegisterOgrModel
+@{
+	ViewBag.Title = "Index";
+}
+
+@{
+	Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+
+<head>
+
+	<title>XYZ Teknoloji Üniversitesi</title>
+	<link rel="stylesheet" href="~/css/style_kayıt_ekranı.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+	<div class="row d-flex justify-content-center align-items-center box">
+		<br>
+		@using (Html.BeginForm("NewOgr", "Register"))
+		{
+			<div class="col">
+				<p class="uni">XYZ Tech. Üni. Öğrenci</p>
+				<div class="row align-items-center">
+					<div class="col">
+						@*<div class="Login">  @Html.LabelFor(a => a.Ogreci.BolumId, new { @class = "Login"})</div>*@
+					</div>
+				</div>
+
+				<div class="row align-items-center">
+					<div class="col">
+						<div>
+							@Html.DropDownListFor(m => m.Ogreci.BolumId, Model.Bolumler.Select(b => new SelectListItem(){
+						Text = b.Ad,
+						Value = b.Id.ToString()
+						}),new {@class ="btn btn-outline-success dropdown-toggle btn-block"})
+						</div>
+						@*<div> @Html.TextBoxFor(a => a.Ogreci.BolumId, new { @class = "form-control" })</div>*@
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="Login">  @Html.LabelFor(a => a.Ogreci.Ad, new { @class = "Login"})</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<div> @Html.TextBoxFor(a => a.Ogreci.Ad, new { @class = "form-control" })</div>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="Login">  @Html.LabelFor(a => a.Ogreci.Soyad, new { @class = "Login"})</div>
+					</div>
+				</div>
+
+				<div class="row align-items-center">
+					<div class="col">
+						<div> @Html.TextBoxFor(a => a.Ogreci.Soyad, new { @class = "form-control" })</div>
+					</div>
+				</div>
+				<div class="row align-items-center">
+					<div class="col">
+						<div class="Login">@Html.LabelFor(a => a.Ogreci.Sifre, new { @class = "Login"})</div>
+					</div>
+				</div>
+
+				<div class="row align-items-center">
+					<div class="col">
+						<div> @Html.TextBoxFor(a => a.Ogreci.Sifre, new { @class = "form-control", type = "Password", id="pwd"  })</div>
+					</div>
+					<div class="col p-sm-0 d-flex align-items-center">
+						<button class="material-icons visibility i button2" onclick="myFunction()">
+							visibility_off
+						</button>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<input type="submit" value="Register" class="button1" />
+						@*<a class="nav-link baş" href="@Url.Action("Index","admin")">Ana sayfaya geri dön</a>*@
+					</div>
+				</div>
+
+			</div>
+
+			<br>
+		}
+	</div>
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("pwd");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+	</script>
+
+	<script>
+		const visibilityToggle = document.querySelector('.visibility');
+
+		const input = document.querySelector('.input-container input');
+
+		var password = true;
+
+		visibilityToggle.addEventListener('click', function () {
+			if (password) {
+				visibilityToggle.innerHTML = 'visibility';
+			} else {
+				visibilityToggle.innerHTML = 'visibility_off';
+			}
+			password = !password;
+
+		});
+	</script>
+</body>
